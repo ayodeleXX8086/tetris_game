@@ -128,6 +128,18 @@ def start_t_move(length):
     return t_movement
 
 
+def start_1_move(length):
+    mid = (length - 1) // 2
+    points = [(0, mid), (1, mid), (2, mid)]
+    movement_1 = Movement(points=points)
+    return movement_1
+
+def start_L_move(length):
+    mid = (length-1)//2
+    points = [(0,mid),(1,mid),(2,mid),(2,mid+1)]
+    movement_L = Movement(points=points)
+    return movement_L
+
 def make_the_board_move(movement, move):
     if move == 'up':
         return movement.make_ninety_degree()
